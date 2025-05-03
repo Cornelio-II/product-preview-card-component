@@ -11,71 +11,60 @@
   --neutral-color-cream: hsl(30, 38%, 92%);
   --neutral-color-white: hsl(0, 0%, 100%);
 
-  --body-font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
-  --h1-font-size: clamp(1.625rem, 1.3169rem + 1.3146vw, 2.5rem);
+  
+  --h1-font-size: clamp(1.625rem, 1.5rem + 2vw, 3rem);
 
   --montserrat-font: "Montserrat", sans-serif;
   --montserrat-font-weight: normal;
   --montserrat-font-weight-medium: 500;
   --montserrat-font-weight-bold: 700;
-  --font-style: normal;
 
   --fraunces-font: "Fraunces", serif;
   --fraunces-font-weight-bold: 700;
-  --fraunces-font-variation-settings: "SOFT" 0, "WONK" 0;
 } 
 
 *, *::before, *::after {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+}
+
+body, html{
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body{
- display: grid;
- place-items: center; 
+  display: grid;
+  place-items: center;
   background-color: var(--neutral-color-cream);
   font-family: var(--montserrat-font);
   color: var(--neutral-color-gray);
   min-height: 100vh;
   line-height: 1.5;
-  padding-block: 2rem;
   font-weight: var(--montserrat-font-weight);
-  font-style: var(--font-style);
-  font-variation-settings: var(--fraunces-font-variation-settings);
-  font-optical-sizing: auto;
-  font-size: var(--body-font-size);
-  transition: all 300ms ease-in-out;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
 }
-picture, img, video,
+
+picture, video,
 iframe,
-webp{
+{
   max-inline-size: 100%;
   block-size: auto;
+  inline-size: auto;
   object-fit: cover;
   object-position: top center;
-  width: 100%;
-  height: auto;
   aspect-ratio: 1/1;
   cursor: pointer;
-  border-top-left-radius: 1rem; 
-  border-top-right-radius: 1rem;  
 }
 
-article{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var( --neutral-color-white);
-  margin: 0  1.5rem;
-  border-radius: 1rem; 
+picture img{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-
 h1{
   font-family: var(--fraunces-font);
   font-weight: var(--fraunces-font-weight-bold);
@@ -83,9 +72,7 @@ h1{
   line-height: 1.2;
   margin-top: 1rem;
   color: var(--neutral-color-black);
-  
 }
-
 p{
   margin: 1rem 0;
 }
