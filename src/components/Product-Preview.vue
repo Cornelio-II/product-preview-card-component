@@ -1,10 +1,22 @@
+<script setup>
+import desktopImg from '/image-product-desktop.jpg';
+import mobileImg from '/image-product-mobile.jpg';
+import addtoCartIcon from '/icon-cart.svg';
+</script>
+
 <template>
   <div class="product-container">
     <header>
-      <picture>
-        <source srcset="/src/images/image-product-desktop.jpg" media="(min-width: 37.5rem)" />
-        <img src="/src/images/image-product-mobile.jpg" alt="Elegant parfume box" fetchpriority="high" decoding="async"/>
+      <div class="image-container">
+        <picture>
+        <source :srcset="desktopImg" media="(min-width: 48rem)" />
+        <img 
+        :src="mobileImg" 
+        alt="Elegant parfume box" 
+        loading="lazy" 
+        />
       </picture>
+      </div>
     </header>
     <div class="product_info">
      <main>
@@ -22,16 +34,18 @@
         </div>
       </main>
       <button class="add-to-cart">
-        <img src="/src/images/icon-cart.svg" alt="cart icon"/>
+        <img :src="addtoCartIcon" alt="cart icon"/>
         <span>Add to Cart</span>
       </button>
     </div>
   </div>
   <div class="attribution">
-   <p>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Cornelio Jr</a>.
-   </p>
+    <footer>
+      <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Cornelio Jr</a>.
+     </p>
+    </footer>
   </div>
 </template>
 
@@ -42,12 +56,14 @@
   background-color: var(--neutral-color-white);
   border-radius: 0.625rem; 
   overflow: hidden ;
-  margin: 1.5rem ;
-  max-width: 50em;
+  margin: 2rem ;
+  max-width: 45em;
 }
+
 .product_info {
   padding: 1.5rem;
 }
+
 .product_info section {
   text-transform: uppercase;
   font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
@@ -67,9 +83,9 @@
 
 .original-price{
   text-decoration: line-through;
-  color: var(--neutral-color-gray);
   margin-left: 1rem;
   vertical-align: middle;
+  font-weight: var(--montserrat-font-weight-medium);
 }
 .attribution {
   margin-top: 1rem;
@@ -78,11 +94,11 @@
 }
 .attribution a {
   color: var(--primary-color-orange);
-  text-decoration: none;
+  text-decoration: underline;
 }
 .attribution a:hover {
-  text-decoration: underline;
   font-weight: var(--montserrat-font-weight-bold);
+  text-decoration: none;
 }
 .description{
     font-size: clamp(1.125rem,  1rem + 0.1878vw, 2.5rem);
@@ -98,11 +114,11 @@
   border-radius: 0.625em;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
   margin: 1.2rem 0;
   padding: 1.2rem;
- 
 }
+
 .add-to-cart:hover {
   background-color: var(--primary-color-700);
 }
@@ -122,7 +138,7 @@
   transition: filter 0.3s ease-in-out;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 48rem) {
   .product-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -130,7 +146,11 @@
   .product_info{
     padding-inline: 2rem;
   }
- 
+  .image-container{
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 </style>

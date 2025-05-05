@@ -46,6 +46,7 @@ body{
   line-height: 1.5;
   font-weight: var(--montserrat-font-weight);
   font-size: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 picture, video,
@@ -73,7 +74,3 @@ h1{
   margin-top: 1rem;
   color: var(--neutral-color-black);
 }
-p{
-  margin: 1rem 0;
-}
-
