@@ -49,8 +49,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Product preview card component](https://github.com/Cornelio-II/Recipe-page)
-- Live Site URL: [Product preview card component](https://cornelio-ii.github.io/recipe-page/)
+- Solution URL: [Product preview card component](https://github.com/Cornelio-II/product-preview-card-component)
+- Live Site URL: [Product preview card component](https://cornelio-ii.github.io/product-preview-card-component/) 
 
 ## My process
 
