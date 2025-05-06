@@ -20,7 +20,7 @@ import addtoCartIcon from '/icon-cart.svg';
     </header>
     <div class="product_info">
       <h3 class="category-name">PERFUME</h3>
-      <h2>Gabrielle Essence Eau De Parfum</h2>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
       <p class="description">
         A floral, solar and voluptuous interpretation composed by Olivier Polge, 
         Perfumer-Creator for the House of CHANEL.
@@ -58,7 +58,6 @@ import addtoCartIcon from '/icon-cart.svg';
 .product_info {
   padding: 1.5rem;
 }
-
 .category-name{
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -133,10 +132,11 @@ import addtoCartIcon from '/icon-cart.svg';
   .product-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    place-content: center;
   }
 
   .image-container{
-    width: 100%;
+    width: fit-content;
     height: 100%;
   }
 

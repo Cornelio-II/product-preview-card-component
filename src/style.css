@@ -12,7 +12,7 @@
   --neutral-color-white: hsl(0, 0%, 100%);
 
   
-  --h2-font-size: clamp(1.5rem, 1.2799rem + 2vw, 2.125rem);
+  --h1-font-size: clamp(1.5rem, 1.2799rem + 2vw, 2.125rem);
   --body-font-size:  clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
   
   --montserrat-font: "Montserrat", sans-serif;
@@ -68,10 +68,10 @@ picture img{
   width: 100%;
   height: 100%;
 }
-h2{
+h1{
   font-family: var(--fraunces-font);
   font-weight: var(--fraunces-font-weight-bold);
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   line-height: 1;
   color: var(--neutral-color-black);
 }
