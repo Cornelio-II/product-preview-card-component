@@ -12,21 +12,23 @@
   --neutral-color-white: hsl(0, 0%, 100%);
 
   
-  --h1-font-size: clamp(1.625rem, 1.5rem + 2vw, 3rem);
-
+  --h2-font-size: clamp(1.5rem, 1.2799rem + 2vw, 2.125rem);
+  --body-font-size:  clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+  
   --montserrat-font: "Montserrat", sans-serif;
   --montserrat-font-weight: normal;
   --montserrat-font-weight-medium: 500;
   --montserrat-font-weight-bold: 700;
 
-  --fraunces-font: "Fraunces", serif;
+  --fraunces-font: "Fraunces", sans-serif;
   --fraunces-font-weight-bold: 700;
-} 
+}
+
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
+ 
 body, html{
   margin: 0;
   padding: 0;
@@ -45,7 +47,7 @@ body{
   min-height: 100vh;
   line-height: 1.5;
   font-weight: var(--montserrat-font-weight);
-  font-size: 1rem;
+  font-size: var(--body-font-size);
   transition: all 0.3s ease-in-out;
 }
 
@@ -57,7 +59,7 @@ iframe,
   inline-size: auto;
   object-fit: cover;
   object-position: top center;
-  aspect-ratio: 1/1;
+  aspect-ratio: 2/1;
   cursor: pointer;
 }
 
@@ -66,11 +68,10 @@ picture img{
   width: 100%;
   height: 100%;
 }
-h1{
+h2{
   font-family: var(--fraunces-font);
   font-weight: var(--fraunces-font-weight-bold);
-  font-size: var(--h1-font-size);
-  line-height: 1.2;
-  margin-top: 1rem;
+  font-size: var(--h2-font-size);
+  line-height: 1;
   color: var(--neutral-color-black);
 }

@@ -9,7 +9,7 @@ import addtoCartIcon from '/icon-cart.svg';
     <header>
       <div class="image-container">
         <picture>
-        <source :srcset="desktopImg" media="(min-width: 48rem)" />
+        <source :srcset="desktopImg" media="(min-width: 37.5rem)" />
         <img 
         :src="mobileImg" 
         alt="Elegant parfume box" 
@@ -19,20 +19,16 @@ import addtoCartIcon from '/icon-cart.svg';
       </div>
     </header>
     <div class="product_info">
-     <main>
-        <section>PERFUME</section>
-        <h1>Gabrielle Essence Eau De Parfum</h1>
-
-        <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-          Perfumer-Creator for the House of CHANEL.
-        </p>
-     </main>
-     <main>
-        <div class="price-container">
-          <span class="current-price">$149.99</span>
-          <span class="original-price">$169.99</span>
-        </div>
-      </main>
+      <h3 class="category-name">PERFUME</h3>
+      <h2>Gabrielle Essence Eau De Parfum</h2>
+      <p class="description">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <div class="price-container">
+        <span class="current-price">$149.99</span>
+        <span class="original-price">$169.99</span>
+      </div>
       <button class="add-to-cart">
         <img :src="addtoCartIcon" alt="cart icon"/>
         <span>Add to Cart</span>
@@ -55,27 +51,24 @@ import addtoCartIcon from '/icon-cart.svg';
   flex-direction: column;
   background-color: var(--neutral-color-white);
   border-radius: 0.625rem; 
-  overflow: hidden ;
-  margin: 2rem ;
-  max-width: 45em;
+  overflow: hidden;
+  margin: 2rem;
+  max-width: 34.375rem;
 }
-
 .product_info {
   padding: 1.5rem;
 }
 
-.product_info section {
+.category-name{
   text-transform: uppercase;
-  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
   letter-spacing: 0.3rem;
   color: var(--neutral-color-gray);
+  font-weight: var(--montserrat-font-weight-medium);
 }
-.price-container{
-  margin: 1rem 0;
-}
+
 .current-price { 
   color: var(--primary-color-500);
-  font-size: clamp(1.7rem, 1.5rem + 2vw, 2.3rem);
+  font-size: clamp(1.125rem, 1.2rem + 1vw, 1.5rem);
   font-weight: var(--montserrat-font-weight-bold);
   font-family: var(--fraunces-font);
   vertical-align: middle;
@@ -101,7 +94,6 @@ import addtoCartIcon from '/icon-cart.svg';
   text-decoration: none;
 }
 .description{
-    font-size: clamp(1.125rem,  1rem + 0.1878vw, 2.5rem);
     font-weight: var(--montserrat-font-weight-medium);
  }
 .add-to-cart{
@@ -115,8 +107,8 @@ import addtoCartIcon from '/icon-cart.svg';
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   transition: background-color 0.4s ease-in-out;
-  margin: 1.2rem 0;
-  padding: 1.2rem;
+  margin: 1rem 0;
+  padding: 1rem;
 }
 
 .add-to-cart:hover {
@@ -124,7 +116,6 @@ import addtoCartIcon from '/icon-cart.svg';
 }
 
 .add-to-cart span{
-  font-size: 0.938rem;
   vertical-align: middle;
   font-weight: var(--montserrat-font-weight-bold);
 }
@@ -138,19 +129,16 @@ import addtoCartIcon from '/icon-cart.svg';
   transition: filter 0.3s ease-in-out;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 37.5rem) {
   .product-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .product_info{
-    padding-inline: 2rem;
-  }
+
   .image-container{
     width: 100%;
     height: 100%;
   }
 
 }
-
 </style>

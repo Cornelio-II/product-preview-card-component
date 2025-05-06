@@ -3,5 +3,8 @@ import ProductPreview from './components/Product-Preview.vue'
 </script>
 
 <template>
-    <ProductPreview/>
+  <main>
+  <ProductPreview/>
+  </main>
+    
 </template>
