@@ -53,7 +53,6 @@ import addtoCartIcon from '/icon-cart.svg';
   background-color: var(--neutral-color-white);
   border-radius: 0.625rem; 
   overflow: hidden;
-  line-height: normal;
   max-width: 34.375rem;
 }
 .product_info {
