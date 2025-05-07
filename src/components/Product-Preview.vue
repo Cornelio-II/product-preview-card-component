@@ -19,8 +19,8 @@ import addtoCartIcon from '/icon-cart.svg';
       </div>
     </header>
     <div class="product_info">
-      <h3 class="category-name">PERFUME</h3>
-      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <h4 class="category-name">PERFUME</h4>
+      <h1 class="product-name">Gabrielle Essence Eau De Parfum</h1>
       <p class="description">
         A floral, solar and voluptuous interpretation composed by Olivier Polge, 
         Perfumer-Creator for the House of CHANEL.
@@ -49,10 +49,11 @@ import addtoCartIcon from '/icon-cart.svg';
 .product-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: var(--neutral-color-white);
   border-radius: 0.625rem; 
   overflow: hidden;
-  margin: 2rem;
+  line-height: normal;
   max-width: 34.375rem;
 }
 .product_info {
@@ -64,7 +65,14 @@ import addtoCartIcon from '/icon-cart.svg';
   color: var(--neutral-color-gray);
   font-weight: var(--montserrat-font-weight-medium);
 }
-
+.product-name{
+  margin: 1rem 0;
+  font-family: var(--fraunces-font);
+  font-weight: var(--fraunces-font-weight-bold);
+  font-size: var(--h1-font-size);
+  line-height: 1;
+  color: var(--neutral-color-black);
+}
 .current-price { 
   color: var(--primary-color-500);
   font-size: clamp(1.125rem, 1.2rem + 1vw, 1.5rem);
@@ -93,7 +101,9 @@ import addtoCartIcon from '/icon-cart.svg';
   text-decoration: none;
 }
 .description{
-    font-weight: var(--montserrat-font-weight-medium);
+  margin: 1rem 0;
+  font-weight: var(--montserrat-font-weight-medium);
+  line-height: 1.5;
  }
 .add-to-cart{
   width: 100%;
@@ -132,13 +142,7 @@ import addtoCartIcon from '/icon-cart.svg';
   .product-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    place-content: center;
   }
-
-  .image-container{
-    width: fit-content;
-    height: 100%;
-  }
-
 }
+
 </style>
