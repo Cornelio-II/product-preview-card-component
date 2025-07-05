@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+  --primary-color-500: hsl(158, 36%, 37%);
+  --primary-color-700: hsl(158, 42%, 18%);
+
+  --neutral-color-black: hsl(212 , 21% , 14%);
+  --neutral-color-gray: hsl(228, 12%, 48%);
+  --neutral-color-cream: hsl(30, 38%, 92%);
+  --neutral-color-white: hsl(0, 0%, 100%);
+
+  
+  --h1-font-size: clamp(1.5rem, 1.2799rem + 2vw, 2.125rem);
+  --body-font-size:  clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+  
+  --montserrat-font: "Montserrat", sans-serif;
+  --montserrat-font-weight: normal;
+  --montserrat-font-weight-medium: 500;
+  --montserrat-font-weight-bold: 700;
+
+  --fraunces-font: "Fraunces", sans-serif;
+  --fraunces-font-weight-bold: 700;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body, html{
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background-color: var(--neutral-color-cream);
+  font-family: var(--montserrat-font);
+  color: var(--neutral-color-gray);
+  font-weight: var(--montserrat-font-weight);
+  font-size: var(--body-font-size);
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+}
+
+picture, img {
+  max-inline-size: 100%;  /*max-width: 100% for internationalization approach*/
+  max-block-size: 100%; /*max-height: 100% for internationalization approach*/
+  block-size: auto; /*height: auto for internationalization approach*/
+  inline-size: 100%; /*width: auto for internationalization approach*/
+  object-fit: cover;
+  object-position: top center;
+}
+
