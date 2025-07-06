@@ -40,6 +40,7 @@ body, html{
 body{
   min-height: 100dvh;
   display: grid;
+  grid-template-columns: subgrid;
   place-items: center;
   background-color: var(--neutral-color-cream);
   font-family: var(--montserrat-font);
@@ -48,14 +49,14 @@ body{
   font-size: var(--body-font-size);
   transition: all 0.3s ease-in-out;
   padding: 1rem;
+  
 }
 
 picture, img {
   max-inline-size: 100%;  /*max-width: 100% for internationalization approach*/
-  max-block-size: 100%; /*max-height: 100% for internationalization approach*/
-  block-size: auto; /*height: auto for internationalization approach*/
-  inline-size: 100%; /*width: auto for internationalization approach*/
-  object-fit: cover;
+  block-size: auto; /*height: 100% for internationalization approach*/
+  inline-size: 100%; /*width: 100% for internationalization approach*/
+  object-fit: cover; /*cover for internationalization approach*/
   object-position: top center;
 }
 

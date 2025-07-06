@@ -5,9 +5,9 @@ import addtoCartIcon from '/icon-cart.svg';
 </script>
 
 <template>
-  <div class="product-container">
+  <main class="product-container">
     <header>
-        <picture class="image-container">
+      <picture>
         <source :srcset="desktopImg" media="(min-width: 37.5rem)" />
         <img 
         :src="mobileImg" 
@@ -16,7 +16,7 @@ import addtoCartIcon from '/icon-cart.svg';
         />
       </picture>
     </header>
-    <div class="product_info">
+    <section class="product_info">
       <h4 class="category-name">Perfume</h4>
       <h1 class="product-name">Gabrielle Essence Eau De Parfum</h1>
       <p class="description">
@@ -31,31 +31,25 @@ import addtoCartIcon from '/icon-cart.svg';
         <img :src="addtoCartIcon" alt="cart icon"/>
         <span>Add to Cart</span>
       </button>
-    </div>
-  </div>
-  <div class="attribution">
-    <footer>
-      <p>
+    </section>
+  </main>
+  <footer class="attribution">
+    <p>
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/Cornelio-II/product-preview-card-component">Cornelio Jr</a>.
-     </p>
-    </footer>
-  </div>
+    </p>
+  </footer>
 </template>
 
 <style scoped>
 .product-container{
-  background-color: var(--neutral-color-white);
   border-radius: 0.625rem; 
   overflow: hidden;
   max-inline-size: 34.375rem; /* max-width: 34.375rem for internationalization approach */
 }
 
-.image-container{
-  display: flex;
-}
-
 .product_info {
+  background-color: var(--neutral-color-white);
   padding: 1.5rem;
 }
 
@@ -73,6 +67,7 @@ import addtoCartIcon from '/icon-cart.svg';
   line-height: 1;
   color: var(--neutral-color-black);
 }
+
 .current-price { 
   color: var(--primary-color-500);
   font-size: clamp(1.125rem, 1.2rem + 1vw, 1.5rem);
@@ -87,18 +82,19 @@ import addtoCartIcon from '/icon-cart.svg';
   vertical-align: middle;
   font-weight: var(--montserrat-font-weight-medium);
 }
+
 .attribution {
   margin-block-start: 1rem; /* margin-top for internationalization */
   text-align: center;
   color: var(--neutral-color-gray);
 }
 
- a {
+a {
   color: var(--primary-color-700);
   text-decoration: underline;
 }
 
- a:hover {
+a:hover {
   font-weight: var(--montserrat-font-weight-bold);
   text-decoration: none;
 }
@@ -108,6 +104,7 @@ import addtoCartIcon from '/icon-cart.svg';
   font-weight: var(--montserrat-font-weight-medium);
   line-height: 1.5;
  }
+
 .add-to-cart{
   inline-size: 100%; /* width: 100% for internationalization approach */
   block-size: auto; /* height: auto for internationalization approach */
