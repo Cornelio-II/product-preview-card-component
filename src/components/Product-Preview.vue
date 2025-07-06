@@ -50,7 +50,6 @@ import addtoCartIcon from '/icon-cart.svg';
 .product_info {
   background-color: var(--neutral-color-white);
   padding: 1.5rem;
-  
 }
 
 .category-name{
