@@ -27,7 +27,7 @@ import addtoCartIcon from '/icon-cart.svg';
         <span class="current-price">$149.99</span>
         <span class="original-price">$169.99</span>
       </div>
-      <button class="add-to-cart">
+      <button class="add-to-cart-btn">
         <img :src="addtoCartIcon" alt="cart icon"/>
         <span>Add to Cart</span>
       </button>
@@ -47,13 +47,14 @@ import addtoCartIcon from '/icon-cart.svg';
   overflow: hidden;
   max-inline-size: 34.375rem; /* max-width: 34.375rem for internationalization approach */
 }
-
 .product_info {
   background-color: var(--neutral-color-white);
   padding: 1.5rem;
+  
 }
 
 .category-name{
+  margin-block-start: auto; /* margin-top for internationalization */
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   color: var(--neutral-color-gray);
@@ -102,10 +103,9 @@ a:hover {
 .description{
   margin: 1rem 0;
   font-weight: var(--montserrat-font-weight-medium);
-  line-height: 1.5;
  }
 
-.add-to-cart{
+.add-to-cart-btn{
   inline-size: 100%; /* width: 100% for internationalization approach */
   block-size: auto; /* height: auto for internationalization approach */
   background-color: var( --primary-color-500);
@@ -119,16 +119,16 @@ a:hover {
   padding: 1rem;
 }
 
-.add-to-cart:hover {
+.add-to-cart-btn:hover {
   background-color: var(--primary-color-700);
 }
 
-.add-to-cart span{
+.add-to-cart-btn span{
   vertical-align: middle;
   font-weight: var(--montserrat-font-weight-bold);
 }
 
-.add-to-cart img {
+.add-to-cart-btn img {
   margin-inline-end: 1rem; /* inline-end instead of right for internationalization */
   inline-size: 1.2em; /* width: 1.2em for internationalization */
   inset-block: 1.2em; /* height: 1.2em for internationalization */
@@ -141,6 +141,10 @@ a:hover {
   .product-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .product_info{
+    line-height: 1.5;
+    block-size: 25.8rem; /* height: 25.8rem for internationalization approach */  
   }
 }
 
