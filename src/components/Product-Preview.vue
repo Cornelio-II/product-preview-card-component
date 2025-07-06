@@ -140,10 +140,10 @@ a:hover {
   .product-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    block-size: 25.8rem; /* height: 25.8rem for internationalization approach */
   }
   .product_info{
-    line-height: 1.5;
-    block-size: 25.8rem; /* height: 25.8rem for internationalization approach */  
+    line-height: 1.5;  
   }
 }
 
