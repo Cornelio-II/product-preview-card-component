@@ -43,12 +43,12 @@ import addtoCartIcon from '/icon-cart.svg';
 
 <style scoped>
 .product-container{
+  background-color: var(--neutral-color-white);
   border-radius: 0.625rem; 
   overflow: hidden;
   max-inline-size: 34.375rem; /* max-width: 34.375rem for internationalization approach */
 }
 .product_info {
-  background-color: var(--neutral-color-white);
   padding: 1.5rem;
 }
 
