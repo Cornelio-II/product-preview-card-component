@@ -27,7 +27,7 @@ import addtoCartIcon from '/icon-cart.svg';
         <span class="current-price">$149.99</span>
         <span class="original-price">$169.99</span>
       </div>
-      <button class="add-to-cart-btn">
+      <button type="button" class="add-to-cart-btn">
         <img :src="addtoCartIcon" alt="cart icon"/>
         <span>Add to Cart</span>
       </button>
