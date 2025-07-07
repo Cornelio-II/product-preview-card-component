@@ -48,6 +48,7 @@ import addtoCartIcon from '/icon-cart.svg';
   overflow: hidden;
   max-inline-size: 34.375rem; /* max-width: 34.375rem for internationalization approach */
 }
+
 .product_info {
   padding: 1.5rem;
 }
@@ -59,6 +60,7 @@ import addtoCartIcon from '/icon-cart.svg';
   color: var(--neutral-color-gray);
   font-weight: var(--montserrat-font-weight-medium);
 }
+
 .product-name{
   margin: 1rem 0;
   font-family: var(--fraunces-font);
@@ -142,6 +144,7 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     block-size: 25.8rem; /* height: 25.8rem for internationalization approach */
   }
+
   .product_info{
     line-height: 1.5;  
   }
